@@ -19,7 +19,7 @@ export function Button({
 
   const variants = {
     primary:
-      'bg-indigo-500 text-white shadow-lg shadow-indigo-500/20 hover:-translate-y-0.5 hover:bg-indigo-400',
+      'bg-indigo-500 text-white shadow-lg shadow-indigo-500/20 hover:-translate-y-0.5 hover:bg-indigo-400 hover:shadow-xl hover:shadow-indigo-500/30',
     secondary:
       'border border-white/15 bg-white/5 text-white hover:bg-white/10 hover:-translate-y-0.5',
   }
