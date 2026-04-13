@@ -8,7 +8,7 @@ export function Features() {
     <Section id="features">
       <Container>
         <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-300">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
             Features
           </p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">

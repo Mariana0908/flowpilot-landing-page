@@ -55,7 +55,7 @@ export const stats = [
   },
   {
     value: '3x',
-    label: 'better task visibility across teams',
+    label: 'clearer task visibility across teams',
   },
   {
     value: '12h',
