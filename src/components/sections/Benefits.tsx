@@ -1,7 +1,7 @@
-import { benefits } from '../../data/landing'
-import { Container } from '../layout/Container'
-import { Section } from '../layout/Section'
-import { Reveal } from '../ui/Reveal'
+import { benefits } from "../../data/landing";
+import { Container } from "../layout/Container";
+import { Section } from "../layout/Section";
+import { Reveal } from "../ui/Reveal";
 
 export function Benefits() {
   return (
@@ -60,7 +60,9 @@ export function Benefits() {
             ))}
           </div>
         </div>
+
+       
       </Container>
     </Section>
-  )
+  );
 }

@@ -1,32 +1,37 @@
-import { Container } from './Container'
-import { Button } from '../ui/Button'
-import { useState, useEffect } from 'react'
-import { MobileMenu } from '../ui/MobileMenu'
+import { Container } from "./Container";
+import { Button } from "../ui/Button";
+import { useState, useEffect } from "react";
+import { MobileMenu } from "../ui/MobileMenu";
+import logo from "../../assets/branding/flowpilot-logo.png";
 
 const navItems = [
-  { label: 'Features', href: '#features' },
-  { label: 'Benefits', href: '#benefits' },
-  { label: 'Trust', href: '#social-proof' },
-]
+  { label: "Features", href: "#features" },
+  { label: "Benefits", href: "#benefits" },
+  { label: "Trust", href: "#social-proof" },
+];
 
 export function Header() {
-    const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
-    useEffect(() => {
-    document.body.style.overflow = isOpen ? 'hidden' : ''
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
     return () => {
-      document.body.style.overflow = ''
-    }
-  }, [isOpen])
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl">
       <Container className="relative flex h-18 min-h-18 items-center justify-between sm:h-20">
-        <a
-          href="#"
-          className="text-xs font-semibold tracking-[0.32em] text-cyan-300 sm:text-sm"
-        >
-          FLOWPILOT
+        <a href="#" className="flex items-center gap-3">
+          <img
+            src={logo}
+            alt="FlowPilot logo"
+            className="h-7 w-7 object-contain sm:h-8 sm:w-8"
+          />
+          <span className="text-xs font-semibold tracking-[0.32em] text-cyan-300 sm:text-sm">
+            FLOWPILOT
+          </span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -51,11 +56,11 @@ export function Header() {
           aria-expanded={isOpen}
           aria-label="Toggle menu"
         >
-          <span className="text-lg leading-none">{isOpen ? '×' : '☰'}</span>
+          <span className="text-lg leading-none">{isOpen ? "×" : "☰"}</span>
         </button>
 
         <MobileMenu isOpen={isOpen} onClose={() => setIsOpen(false)} />
       </Container>
     </header>
-  )
+  );
 }

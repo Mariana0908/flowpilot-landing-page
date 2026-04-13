@@ -1,4 +1,5 @@
-import { Container } from './Container'
+import { Container } from "./Container";
+import logo from "../../assets/branding/flowpilot-logo.png";
 
 export function Footer() {
   return (
@@ -6,9 +7,16 @@ export function Footer() {
       <Container>
         <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-xs font-semibold tracking-[0.32em] text-cyan-300 sm:text-sm">
-              FLOWPILOT
-            </p>
+            <div className="flex items-center gap-3">
+              <img
+                src={logo}
+                alt="FlowPilot logo"
+                className="h-7 w-7 object-contain"
+              />
+              <p className="text-xs font-semibold tracking-[0.32em] text-cyan-300 sm:text-sm">
+                FLOWPILOT
+              </p>
+            </div>
             <p className="mt-3 max-w-sm text-sm leading-6 text-slate-400">
               AI-powered workspace for modern teams built to connect ideas,
               tasks, and decisions in one place.
@@ -29,5 +37,5 @@ export function Footer() {
         </div>
       </Container>
     </footer>
-  )
+  );
 }
