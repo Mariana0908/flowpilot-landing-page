@@ -47,10 +47,10 @@ export function Hero() {
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
             >
-              <div className="absolute inset-0 -z-10 rounded-[2rem] bg-indigo-500/10 blur-3xl" />
+              <div className="absolute inset-0 -z-10 rounded-4xl bg-indigo-500/10 blur-3xl" />
 
               <div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/5 p-3 shadow-2xl shadow-black/30 backdrop-blur sm:rounded-[2rem] sm:p-4">
-                <div className="rounded-[1.4rem] border border-white/10 bg-slate-900/80 p-4 sm:rounded-[1.5rem] sm:p-5">
+                <div className="rounded-[1.4rem] border border-white/10 bg-slate-900/80 p-4 sm:rounded-3xl sm:p-5">
                   <div className="flex flex-col gap-3 border-b border-white/10 pb-4 sm:flex-row sm:items-center sm:justify-between">
                     <div>
                       <p className="text-sm font-medium text-white">Weekly product sync</p>

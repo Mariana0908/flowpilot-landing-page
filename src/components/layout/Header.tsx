@@ -21,7 +21,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl">
-      <Container className="relative flex h-18 min-h-[72px] items-center justify-between sm:h-20">
+      <Container className="relative flex h-18 min-h-18 items-center justify-between sm:h-20">
         <a
           href="#"
           className="text-xs font-semibold tracking-[0.32em] text-cyan-300 sm:text-sm"
