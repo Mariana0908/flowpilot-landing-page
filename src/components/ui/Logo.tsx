@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-export function Logo(props: SVGProps<SVGSVGElement>) {
+export const Logo = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="48"

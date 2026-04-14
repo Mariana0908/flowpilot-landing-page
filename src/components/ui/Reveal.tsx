@@ -7,12 +7,12 @@ type RevealProps = {
   y?: number
 }
 
-export function Reveal({
+export const Reveal = ({
   children,
   className,
   delay = 0,
   y = 24,
-}: RevealProps) {
+}: RevealProps) => {
   const style: CSSProperties = {
     animationDelay: `${delay}s`,
     ['--from-y' as any]: `${y}px`,

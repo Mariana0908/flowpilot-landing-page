@@ -4,7 +4,7 @@ import { Button } from '../ui/Button'
 import { heroContent } from '../../data/landing'
 import { Reveal } from '../ui/Reveal'
 
-export function Hero() {
+export const Hero = () => {
   return (
     <Section className="pt-16 sm:pt-20">
       <Container>
