@@ -2,7 +2,7 @@
 
 A responsive landing page prototype for **FlowPilot**, an AI-powered workspace that helps teams organize ideas, tasks, and decisions in one place. Built as part of a Senior Frontend Developer technical challenge.
 
-**Live URL:** _[Deploy to Vercel/Netlify and add URL here]_  
+**Live URL:** https://flowpilot-landing-page-six.vercel.app/#  
 **Repository:** https://github.com/Mariana0908/flowpilot-landing-page
 
 ---
