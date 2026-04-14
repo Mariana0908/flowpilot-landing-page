@@ -6,7 +6,7 @@ type FeatureCardProps = {
 export function FeatureCard({ title, description }: FeatureCardProps) {
   return (
     <article className="group rounded-[1.75rem] border border-white/10 bg-white/5 p-6 transition-colors duration-300 hover:border-cyan-400/30 hover:bg-white/[0.07]">
-      <div className="mb-5 h-10 w-10 rounded-2xl bg-gradient-to-br from-indigo-400/30 to-cyan-400/30 ring-1 ring-white/10" />
+      <div className="mb-5 h-10 w-10 rounded-2xl bg-linear-to-br from-indigo-400/30 to-cyan-400/30 ring-1 ring-white/10" />
 
       <h3 className="text-lg font-semibold text-white">{title}</h3>
 

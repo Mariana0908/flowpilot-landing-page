@@ -37,8 +37,8 @@ export function Hero() {
           </div>
 
           <Reveal delay={0.2} y={32}>
-            <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950 p-4">
-              <div className="rounded-[1.5rem] border border-white/10 bg-slate-900 p-5">
+            <div className="overflow-hidden rounded-4xl border border-white/10 bg-slate-950 p-4">
+              <div className="rounded-3xl border border-white/10 bg-slate-900 p-5">
                 <div className="flex items-center justify-between border-b border-white/10 pb-4">
                   <div>
                     <p className="text-sm font-medium text-white">Weekly product sync</p>

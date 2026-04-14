@@ -6,7 +6,7 @@ export function FinalCTA() {
   return (
    <Section className="pb-24">
       <Container>
-          <div className="overflow-hidden rounded-4xl border border-white/10 bg-slate-950 p-8 sm:p-10 lg:p-12">
+          <div className="overflow-hidden rounded-4xl border border-white/10 bg-linear-to-br from-indigo-500/15 via-slate-900/95 to-cyan-500/10 p-8 sm:p-10 lg:p-12">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-300/80">
                 Final call

@@ -37,7 +37,7 @@ export function Benefits() {
             {benefits.map((benefit, index) => (
                 <article className="rounded-[1.75rem] border border-white/10 bg-slate-950 p-6">
                   <div className="flex items-start gap-4">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-indigo-400/20 to-cyan-400/20 text-sm font-semibold text-cyan-200">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-linear-to-br from-indigo-400/20 to-cyan-400/20 text-sm font-semibold text-cyan-200">
                       0{index + 1}
                     </div>
 
