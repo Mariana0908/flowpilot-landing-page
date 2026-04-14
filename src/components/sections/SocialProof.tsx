@@ -3,13 +3,11 @@ import { Container } from '../layout/Container'
 import { Section } from '../layout/Section'
 import { StatCard } from '../ui/StatCard'
 import { TestimonialCard } from '../ui/TestimonialCard'
-import { Reveal } from '../ui/Reveal'
 
 export function SocialProof() {
   return (
     <Section id="social-proof">
       <Container>
-        <Reveal>
           <div className="text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-300/80">
               Trust & momentum
@@ -25,9 +23,7 @@ export function SocialProof() {
               and real-world scenarios.
             </p>
           </div>
-        </Reveal>
 
-        <Reveal delay={0.08}>
           <div className="mt-12 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm font-medium tracking-[0.18em] text-slate-500">
             {trustedLogos.map((logo) => (
               <span key={logo} className="transition hover:text-white">
@@ -35,25 +31,20 @@ export function SocialProof() {
               </span>
             ))}
           </div>
-        </Reveal>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {stats.map((stat, index) => (
-            <Reveal key={stat.label} delay={index * 0.08}>
+          {stats.map((stat) => (
               <StatCard value={stat.value} label={stat.label} />
-            </Reveal>
           ))}
         </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
-          {testimonials.map((testimonial, index) => (
-            <Reveal key={testimonial.name} delay={index * 0.08}>
+          {testimonials.map((testimonial) => (
               <TestimonialCard
                 quote={testimonial.quote}
                 name={testimonial.name}
                 role={testimonial.role}
               />
-            </Reveal>
           ))}
         </div>
       </Container>

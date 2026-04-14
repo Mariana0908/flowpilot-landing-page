@@ -1,4 +1,3 @@
-import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from './Button'
 
 type MobileMenuProps = {
@@ -13,17 +12,13 @@ const navItems = [
 ]
 
 export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+  if (!isOpen) {
+    return null
+  }
+
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -14 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -14 }}
-          transition={{ duration: 0.25, ease: 'easeOut' }}
-          className="absolute top-full left-0 w-full border-b border-white/10 bg-slate-950/95 shadow-2xl shadow-black/30 backdrop-blur-xl md:hidden"
-        >
-          <div className="flex flex-col gap-6 px-6 py-8">
+    <div className="absolute top-full left-0 w-full border-b border-white/10 bg-slate-950/95 md:hidden transition-opacity duration-200 ease-out">
+        <div className="flex flex-col gap-6 px-6 py-8">
             <div className="space-y-5">
               {navItems.map((item) => (
                 <a
@@ -43,8 +38,6 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               </Button>
             </div>
           </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+    </div>
   )
 }

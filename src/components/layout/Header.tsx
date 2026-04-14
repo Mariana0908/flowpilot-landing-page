@@ -1,8 +1,8 @@
 import { Container } from "./Container";
 import { Button } from "../ui/Button";
-import { useState, useEffect } from "react";
+import { Logo } from "../ui/Logo";
 import { MobileMenu } from "../ui/MobileMenu";
-import logo from "../../assets/branding/flowpilot-logo.png";
+import { useState, useEffect } from "react";
 
 const navItems = [
   { label: "Features", href: "#features" },
@@ -21,17 +21,11 @@ export function Header() {
   }, [isOpen]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/95">
       <Container className="relative flex h-18 min-h-18 items-center justify-between sm:h-20">
-        <a href="#" className="flex items-center gap-3">
-          <img
-            src={logo}
-            alt="FlowPilot logo"
-            className="h-7 w-7 object-contain sm:h-8 sm:w-8"
-          />
-          <span className="text-xs font-semibold tracking-[0.32em] text-cyan-300 sm:text-sm">
-            FLOWPILOT
-          </span>
+        <a href="#" className="flex items-center gap-3 text-xs font-semibold tracking-[0.32em] text-cyan-300 sm:text-sm">
+          <Logo className="h-7 w-7 sm:h-8 sm:w-8" aria-label="FlowPilot logo" />
+          FLOWPILOT
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">

@@ -1,16 +1,12 @@
 import { Container } from '../layout/Container'
 import { Section } from '../layout/Section'
 import { Button } from '../ui/Button'
-import { Reveal } from '../ui/Reveal'
 
 export function FinalCTA() {
   return (
    <Section className="pb-24">
       <Container>
-        <Reveal>
-          <div className="relative overflow-hidden rounded-4xl border border-white/10 bg-linear-to-br from-indigo-500/15 via-slate-900 to-cyan-500/10 p-8 sm:p-10 lg:p-12">
-            <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(34,211,238,0.18),transparent_25%),radial-gradient(circle_at_bottom_left,rgba(99,102,241,0.16),transparent_30%)]" />
-
+          <div className="overflow-hidden rounded-4xl border border-white/10 bg-slate-950 p-8 sm:p-10 lg:p-12">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-300/80">
                 Final call
@@ -32,7 +28,6 @@ export function FinalCTA() {
               </div>
             </div>
           </div>
-        </Reveal>
       </Container>
     </Section>
   )
