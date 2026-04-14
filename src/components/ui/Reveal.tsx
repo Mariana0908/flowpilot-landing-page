@@ -1,5 +1,4 @@
-import type { ReactNode } from 'react'
-import { motion } from 'framer-motion'
+import type { CSSProperties, ReactNode } from 'react'
 
 type RevealProps = {
   children: ReactNode
@@ -8,21 +7,22 @@ type RevealProps = {
   y?: number
 }
 
-export function Reveal({
+export const Reveal = ({
   children,
   className,
   delay = 0,
   y = 24,
-}: RevealProps) {
+}: RevealProps) => {
+  const style: CSSProperties = {
+    animationDelay: `${delay}s`,
+    ['--from-y' as any]: `${y}px`,
+  }
+
+  const classes = ['opacity-0', 'animate-fade-up', className].filter(Boolean).join(' ')
+
   return (
-    <motion.div
-      className={className}
-      initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6, ease: 'easeOut', delay }}
-    >
+    <div className={classes} style={style}>
       {children}
-    </motion.div>
+    </div>
   )
 }

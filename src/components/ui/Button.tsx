@@ -8,12 +8,12 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: ButtonVariant
 }
 
-export function Button({
+export const Button = ({
   children,
   variant = 'primary',
   className,
   ...props
-}: ButtonProps) {
+}: ButtonProps) => {
   const baseStyles =
     'inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition duration-300 ease-out'
 
