@@ -123,7 +123,7 @@ src/
 
 ## How AI-Assisted Tools Were Used
 
-This project was built using **Cline (AI coding assistant in VS Code)** alongside manual review and refinement at every step.
+This project was built using **Copilot, Claude, Chat GPT and Cline (AI coding assistant in VS Code) and for logo generation Canva IA** alongside manual review and refinement at every step.
 
 ### What AI helped with
 - **Scaffolding**: Generating the initial component structure and TypeScript types from the product brief.
