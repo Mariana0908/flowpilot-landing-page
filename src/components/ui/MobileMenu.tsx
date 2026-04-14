@@ -4,6 +4,7 @@ import { Button } from './Button'
 type MobileMenuProps = {
   isOpen: boolean
   onClose: () => void
+  onRequestAccess: () => void
 }
 
 const navItems = [
@@ -12,7 +13,7 @@ const navItems = [
   { label: 'Trust', href: '#social-proof' },
 ]
 
-export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
+export const MobileMenu = ({ isOpen, onClose, onRequestAccess }: MobileMenuProps) => {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -49,7 +50,10 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
         </nav>
 
         <div className="pt-2">
-          <Button className="w-full" onClick={onClose}>
+          <Button className="w-full" onClick={() => {
+            onRequestAccess()
+            onClose()
+          }}>
             Request access
           </Button>
         </div>

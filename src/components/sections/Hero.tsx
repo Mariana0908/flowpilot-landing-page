@@ -4,7 +4,11 @@ import { Button } from '../ui/Button'
 import { heroContent } from '../../data/landing'
 import { Reveal } from '../ui/Reveal'
 
-export const Hero = () => {
+type HeroProps = {
+  onRequestAccess: () => void
+}
+
+export const Hero = ({ onRequestAccess }: HeroProps) => {
   return (
     <Section className="pt-16 sm:pt-20">
       <Container>
@@ -30,7 +34,9 @@ export const Hero = () => {
 
             <Reveal delay={0.24}>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <Button>{heroContent.primaryAction}</Button>
+                <Button className='w-full sm:w-auto' onClick={onRequestAccess}>
+                  {heroContent.primaryAction}
+                </Button>
                 <Button variant="secondary">{heroContent.secondaryAction}</Button>
               </div>
             </Reveal>

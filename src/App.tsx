@@ -6,20 +6,30 @@ import { Benefits } from './components/sections/Benefits'
 import { Features } from './components/sections/Features'
 import { FinalCTA } from './components/sections/FinalCTA'
 import { SocialProof } from './components/sections/SocialProof'
+import { HireMeModal } from './components/ui/HireMeModal'
+import { useState } from 'react'
 
 function App() {
+  const [isHireMeModalOpen, setIsHireMeModalOpen] = useState(false)
+
+  const openHireMeModal = () => setIsHireMeModalOpen(true)
+  const closeHireMeModal = () => setIsHireMeModalOpen(false)
 
   return (
    <div className="min-h-screen">
-      <Header />
+      <Header onRequestAccess={openHireMeModal} />
       <main>
-        <Hero />
+        <Hero onRequestAccess={openHireMeModal} />
         <Features />
         <Benefits />
         <SocialProof />
-        <FinalCTA />
+        <FinalCTA onRequestAccess={openHireMeModal} />
       </main>
       <Footer />
+      <HireMeModal
+        isOpen={isHireMeModalOpen}
+        onClose={closeHireMeModal}
+      />
     </div>
   )
 }

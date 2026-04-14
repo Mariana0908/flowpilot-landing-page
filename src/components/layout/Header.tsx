@@ -9,8 +9,11 @@ const navItems = [
   { label: 'Benefits', href: '#benefits' },
   { label: 'Trust', href: '#social-proof' },
 ]
+type HeaderProps = {
+  onRequestAccess: () => void
+}
 
-export const Header = () => {
+export const Header = ({ onRequestAccess }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -59,7 +62,7 @@ export const Header = () => {
         </nav>
 
         <div className="hidden md:block">
-          <Button>Request access</Button>
+          <Button onClick={onRequestAccess}>Request access</Button>
         </div>
 
         <button
@@ -74,7 +77,11 @@ export const Header = () => {
           </span>
         </button>
 
-        <MobileMenu isOpen={isOpen} onClose={() => setIsOpen(false)} />
+        <MobileMenu
+          isOpen={isOpen}
+          onClose={() => setIsOpen(false)}
+          onRequestAccess={onRequestAccess}
+        />
       </Container>
     </header>
   )

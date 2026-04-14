@@ -4,7 +4,11 @@ import { SectionHeading } from '../layout/SectionHeading'
 import { Button } from '../ui/Button'
 import { Reveal } from '../ui/Reveal'
 
-export const FinalCTA = () => {
+type FinalCTAProps = {
+  onRequestAccess: () => void
+}
+
+export const FinalCTA = ({ onRequestAccess }: FinalCTAProps) => {
   return (
    <Section className="pb-24">
       <Container>
@@ -21,7 +25,7 @@ export const FinalCTA = () => {
 
               <Reveal delay={0.1}>
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                  <Button>Request access</Button>
+                  <Button onClick={onRequestAccess}>Request access</Button>
                   <Button variant="secondary">Book a demo</Button>
                 </div>
               </Reveal>
