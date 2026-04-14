@@ -2,7 +2,7 @@
 
 A responsive landing page prototype for **FlowPilot**, an AI-powered workspace that helps teams organize ideas, tasks, and decisions in one place. Built as part of a Senior Frontend Developer technical challenge.
 
-**Live URL:** _[Deploy to Vercel/Netlify and add URL here]_  
+**Live URL:** https://flowpilot-landing-page-six.vercel.app/#  
 **Repository:** https://github.com/Mariana0908/flowpilot-landing-page
 
 ---
@@ -123,7 +123,7 @@ src/
 
 ## How AI-Assisted Tools Were Used
 
-This project was built using **Cline (AI coding assistant in VS Code)** alongside manual review and refinement at every step.
+This project was built using **Copilot, Claude, Chat GPT and Cline (AI coding assistant in VS Code) and for logo generation Canva IA** alongside manual review and refinement at every step.
 
 ### What AI helped with
 - **Scaffolding**: Generating the initial component structure and TypeScript types from the product brief.
